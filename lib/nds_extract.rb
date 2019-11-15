@@ -81,7 +81,6 @@ end
 def movies_with_directors_set(source)
   results = []
   i = 0 
-  binding.pry 
   while i < source.length do 
     director_name = source[i][:name]
     movies = source[i][:movies]
