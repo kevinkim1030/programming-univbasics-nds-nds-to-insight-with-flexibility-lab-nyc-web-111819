@@ -69,10 +69,9 @@ def gross_per_studio(collection)
   new_hash = {}
   while i < collection.length do 
     studio_name = collection[i][:studio]
-    new_hash[:studio_name] << studio_name
+    new_hash[studio_name][:worldwide_gross] = gross_per_studio(collection)
     
   end
-  binding.pry
   new_hash
 end
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
